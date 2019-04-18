@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// see value of mx
+// see data type of arr
 const static int mx=200010;
 int arr[mx],temp[mx];
 void mergesort(int l,int r)
@@ -24,7 +26,7 @@ void mergesort(int l,int r)
 		{
 			temp[k++]=arr[y++];
 		}
-		for(int x=l;x<=r;x++)arr[x]=temp[x];
+		for(x=l;x<=r;x++)arr[x]=temp[x];
 	}
 }
 int main(int argc, char const *argv[])
