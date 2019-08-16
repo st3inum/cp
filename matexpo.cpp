@@ -17,7 +17,7 @@ public:
 			v[i] = 0;
 		}
 	}
-	matrix(int r, int c, int val)
+	matrix(int r, int c, T val)
 	{
 		I.resize(r, vector<T> (c, val));
 	}
@@ -63,6 +63,7 @@ public:
 				for (int k = 0; k < I[0].size(); k++)
 				{
 					temp.I[i][j] += I[i][k] * obj.I[k][j];
+					//temp.I[i][j] %= mod;
 				}
 			}
 		}
@@ -93,7 +94,6 @@ public:
 };
 
 
-
 template<class T>
 matrix<T> pow(matrix<T> a, long long b, long long mod)
 {
@@ -103,6 +103,10 @@ matrix<T> pow(matrix<T> a, long long b, long long mod)
 	if (b & 1)return (q * a)%mod;
 	return q;
 }
+
+
+
+
 
 
 int main(int argc, char const *argv[])
